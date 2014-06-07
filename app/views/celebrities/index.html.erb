@@ -13,7 +13,7 @@
 <% @celebrities.each do |celebrity| %>
 <ul>
   <li>
-    <%= celebrity.name %>, <%= celebrity.job %>
+    <%= link_to "#{celebrity.name}", celebrity_path(celebrity) %>, <%= celebrity.job %>
   </li>
 </ul>
 <% end %>

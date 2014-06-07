@@ -1,0 +1,13 @@
+<%= form_for @celebrity do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :job %>
+    <%= f.text_field :job %>
+  </p>
+  <p>
+  <%= f.submit 'Update celebrity' %>
+  </p>
+<% end %>
