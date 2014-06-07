@@ -1,0 +1,19 @@
+<%= form_for @celebrity do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :job %>
+    <%= f.text_field :job %>
+  </p>
+  <%= f.submit 'Add celebrity' %>
+<% end %>
+
+<% @celebrities.each do |celebrity| %>
+<ul>
+  <li>
+    <%= celebrity.name %>, <%= celebrity.job %>
+  </li>
+</ul>
+<% end %>
