@@ -28,6 +28,12 @@ class CelebritiesController < ApplicationController
     redirect_to celebrities_path
   end
 
+  def destroy
+    @celebrity = Celebrity.find(params[:id]).delete
+    redirect_to celebrities_path
+
+  end
+
   private
   def celebrity_params
     params.require(:celebrity).permit(:name, :job)
